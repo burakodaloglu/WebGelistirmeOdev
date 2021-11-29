@@ -1,0 +1,51 @@
+﻿@model odev.Models.Urun
+
+@{
+    ViewData["Title"] = "Sil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Sil</h1>
+
+<h3>Silmek istediğinize eminmisiniz?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ürün_Adı)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ürün_Adı)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ürün_kodu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ürün_kodu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fiyatı)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fiyatı)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Türü)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Türü)
+        </dd>
+    </dl>
+    
+    <form asp-action="Sil">
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Liste">Geri Dön</a>
+    </form>
+</div>
